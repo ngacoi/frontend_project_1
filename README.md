@@ -1,2 +1,5 @@
-# frontend_project_1
-mini project for frontend
+# LOGIN PAGE
+
+pure js with login page
+
+![login page](./assets/post.png)
