@@ -3,7 +3,7 @@
 // module pattern IFFE
 
 // cay DOM
-const DOM_HELPER = (function () {
+const DOM_HELPER = ( () => {
     const getElementById = id => document.getElementById(id);
     const getElementByClass = _class => document.getElementsByClassName(_class);
 
@@ -14,7 +14,7 @@ const DOM_HELPER = (function () {
 })();
 
 
-(function () {
+( () => {
     const $submitBtn = DOM_HELPER.getElementById('login-btn');
     const $errname = DOM_HELPER.getElementByClass('err-text')[0];
 
@@ -26,7 +26,7 @@ const DOM_HELPER = (function () {
         const $email = DOM_HELPER.getElementById('inputEmail');
         const $password = DOM_HELPER.getElementById('inputPassword');
         if (!isRightUserName($email.value) || !isRightPassWord($password.value)) {
-            $errname.innerHTML = 'leu leu may nhap sai cmn roi haha';
+            $errname.innerHTML = 'lêu leu may nhap sai cmn roi haha';
             $errname.className = 'red';
         } else {
             $errname.innerHTML = 'well done, cuoi cung may cung vao thanh cong';
